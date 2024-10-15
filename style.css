@@ -1,0 +1,11 @@
+/* Basic page styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Styling for the hCaptcha */
+.h-captcha {
+  margin-top: 20px;
+}
