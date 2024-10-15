@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hCaptcha Verification</title>
+    <!-- Link to the external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load hCaptcha API -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  </head>
+  <body>
+    <h2>Please complete the hCaptcha to proceed</h2>
+    
+    <!-- hCaptcha container -->
+    <div class="h-captcha" data-sitekey="f7e2e42e-4596-4c16-83ae-2e3e90049186" data-callback="onCaptchaComplete"></div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
