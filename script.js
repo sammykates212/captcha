@@ -9,7 +9,7 @@ function onCaptchaComplete() {
       return;
     }
 
-    // Write content to the pop-up window, informing the user of redirection
+    // Write content to the pop-up window, without showing the target link
     popup.document.write(`
       <!DOCTYPE html>
       <html>
@@ -21,11 +21,17 @@ function onCaptchaComplete() {
               text-align: center;
               margin-top: 50px;
             }
+            .redirect-message {
+              font-size: 18px;
+              margin-top: 20px;
+            }
           </style>
         </head>
         <body>
           <h2>Verification Complete!</h2>
-          <p>Redirecting you to the next page...</p>
+          <div class="redirect-message">
+            You are being redirected, please wait...
+          </div>
           <script>
             setTimeout(function() {
               window.location.href = "https://chat.lucasnsam.site/chat";
@@ -35,7 +41,7 @@ function onCaptchaComplete() {
       </html>
     `);
 
-    popup.document.close(); // Ensure document finishes writing
+    popup.document.close(); // Ensure the document is fully written
   } catch (error) {
     console.error("Error opening pop-up:", error);
   }
